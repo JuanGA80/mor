@@ -1,0 +1,742 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --primary-color: #2A2F35;
+  --secondary-color: #999999;
+  --tercer-color: rgb(0, 0, 100);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Mulish', sans-serif;
+  overflow-x: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+h3 {
+  color: var(--primary-color);
+}
+p {
+  color: var(--secondary-color);
+}
+/*EStilos header*/
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 11;
+  width: 100%;
+  transition: all 0.275s ease;
+  padding: 0 1rem;
+  max-width: 1400px;
+}
+.header-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.header-blanco {
+  background-color: white;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  transition: all 0.275s ease;
+}
+.header img {
+  width: 50%;
+  max-width: 40%;
+  cursor: pointer;
+}
+.header .btn-menu span {
+  width: 25px;
+  height: 4px;
+  background-color: #000;
+  display: flex;
+  margin-bottom: 5px;
+}
+.header .btn-menu {
+  cursor: pointer;
+}
+/*Menu Móvil*/
+.menu-movil a {
+  text-decoration: none;
+  color: #000;
+  margin-bottom: 15px;
+  font-size: 25px;
+  font-weight: 600;
+}
+.menu-movil #close {
+  font-size: 25px;
+  position: absolute;
+  top: 40px;
+  right: 30px;
+  color: #000;
+  cursor: pointer;
+}
+.menu-movil {
+  padding: 60px 25px 25px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 300px;
+  height: 100vh;
+  position: fixed;
+  z-index: 12;
+  top: 0;
+  right: -350px;
+  box-shadow: 0px 10px 5px 5px  rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in;
+}
+.menu-desktop {
+  display: none;
+}
+.menu-movil .menu-rs {
+  margin-top: 50px;
+}
+.menu-movil .menu-rs svg {
+  width: 25px;
+  margin-left: 15px;
+}
+.show-menu {
+  transition: all 0.3s ease-in;
+  right: 0;
+}
+/*Fin Menu Móvil*/
+/*Fin estilos header*/
+/*Estilos Hero*/
+.sample-slider{
+  width:100%;
+  position: relative;
+}
+.sample-slider img{
+  width: 100%;
+  object-fit: cover;
+  height: 550px;
+}
+.img-des {
+  display: none;
+}
+.swiper-slide {
+  margin: 0 auto;
+}
+.sample-slider h2 {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  color: white;
+}
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 60px 1rem;
+  text-align: center;
+}
+.hero .hero-txt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  max-width: 600px;
+}
+.hero h4,
+.exito h4,
+.texto-testimonios h4 {
+  color: var(--secondary-color);
+}
+.hero h3,
+.nosotros h3,
+.exito h3, 
+.texto-testimonios h3 {
+  font-size: 1.4em;
+}
+.hero span,
+.nosotros span,
+.exito span,
+.contacto span {
+  width: 35px;
+  height: 6px;
+  background-color: rgb(0, 0, 100);
+  display: flex;
+  border-radius: 3px;
+  margin: 20px 0;
+}
+.hero p,
+.nosotros p,
+.exito p,
+.texto-testimonios p,
+.contacto p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+/*Fin Estilos Hero*/
+.container-servicios, .container-nosotros {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+.servicios {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  place-items: center;
+  padding: 0 1rem;
+  gap: 4rem;
+  max-width: 1200px;
+}
+.item-servicios {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.item-servicios h3 {
+  margin: 45px 0 30px 0;
+}
+.item-servicios img {
+  width: 100%;
+}
+.servicios .btn-casos,
+.texto-testimonios a {
+  padding: 20px 35px;
+  color: white;
+  background-color: rgb(0, 0, 100);
+  border-radius: 8px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+.servicios .btn-casos:hover, .texto-testimonios a:hover {
+  transition: all 0.2s ease-in-out;
+  background-color: #25282b;
+}
+/*Estilos Nosotros*/
+.nosotros {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 60px 1rem;
+  background-color: #25282b;
+  text-align: center;
+}
+.container-nosotros {
+  background-color: #25282b;
+}
+.nosotros h3 {
+  color: white;
+}
+.nosotros h4 {
+  color: #b8b8b8;
+}
+.nosotros p {
+  text-align: justify;
+}
+.counter {
+  padding: 60px 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  max-width: 1200px;
+}
+.counter .item-counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 10px 0;
+}
+.counter .item-counter > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.counter .item-counter i {
+  margin-right: 10px;
+  font-size: 35px;
+  color: var(--tercer-color);
+}
+.counter .item-counter h2 {
+  font-size: 60px;
+}
+.counter h3 {
+  margin-bottom: 50px;
+}
+.counter .item-counter p {
+  font-size: 1.4em;
+}
+/*Estilos Detalles*/
+.detalles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.detalles .item-detalles {
+  width: 100%;
+  height: 150px;
+}
+.detalles .item-detalles h2 {
+  width: 100%;
+  height: 100%;
+  background-color: #000000a9;
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.275s linear;
+}
+.detalles .item-detalles:hover > h2 {
+  background-color: #1f49706d;
+  transition: all 0.275s linear;
+}
+.detalles .parte-1 {
+  background-image: url(../img/_MG_1470.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.detalles .parte-2 {
+  background-image: url(../img/_MG_1325.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.detalles .parte-3 {
+  background-image: url(../img/_MG_1418.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+/*Casos de Éxito*/
+.exito {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 60px 1rem;
+  text-align: center;
+}
+.galeria-casos {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+
+}
+.galeria-casos img {
+  width: 100%;
+}
+.galeria-casos .item-casos {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.galeria-casos .item-casos .content-4 {
+  position: absolute;
+  z-index: 3;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  transform: scale(0);
+  transition: 0.5s;
+  background-color: #000000b6;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  color: white;
+}
+.galeria-casos .item-casos:hover .content-4 {
+  transform: scale(1);
+}
+/*Fin Estilos Galería*/
+/*Estilos TEstimonios*/
+.container-testimonios {
+  background-image: url(../img/Slider/_MG_1489.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+.max-testi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #000000a9;
+}
+.testimonios {
+  padding: 60px 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.testimonios .texto-testimonios {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  text-align: start;
+  margin-bottom: 20px;
+}
+.testimonios .texto-testimonios h3 {
+  color: white;
+}
+.testimonios .texto-testimonios p {
+  margin: 20px 0;
+}
+.swiper-container, 
+.swiper-container-1 {
+  position: relative;
+  width: 300px;
+  margin: 0 auto;
+}
+.swiper-container .swiper-button-prev{
+  left: -40px;
+}
+.swiper-container .swiper-button-next{
+  right: -40px;
+}
+.swiper-container .swiper-pagination,
+.swiper-container-1 .swiper-pagination {
+  bottom: -30px!important;
+}
+.item-testimonios {
+  padding: 40px 40px 30px;
+  background-color: white;
+  height: auto !important;
+}
+.item-testimonios img {
+  width: 75px;
+}
+.item-testimonios p {
+  margin: 30px 0;
+}
+.item-testimonios h3 {
+  padding-top: 20px;
+}
+.swiper-pagination-bullet {
+  width: 25px !important;
+  height: 4px!important;
+  font-size: 12px!important;
+  color: #000!important;
+  opacity: 1!important;
+  background: rgba(0, 0, 0, 0.2)!important;
+  border-radius: 6px !important;
+}
+
+.swiper-pagination-bullet-active {
+  color: #fff!important;
+  background: var(--tercer-color) !important;
+}
+/*Estilos Contacto*/
+.contacto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 90px 1rem;
+  max-width: 1200px;
+}
+.contacto .texto-contacto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.contacto .container-datos {
+  margin: 20px 0;
+  text-decoration: none;
+  color: inherit;
+}
+.contacto .container-datos i {
+  font-size: 40px;
+  color: var(--tercer-color);
+}
+.contacto .container-datos h5 {
+  color: var(--secondary-color);
+}
+.contacto .container-datos h2 {
+  font-weight: bold;
+}
+.contacto .container-datos ul {
+  list-style: none;
+}
+.texto-contacto {
+  margin-bottom: 20px;
+}
+.contacto .container-datos li {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.consultorio{
+  width: 100%;
+  height: 100%;
+}
+.consultorio img {
+  width: 100%;
+  opacity: 0.5;
+  transition: all 0.175s linear;
+}
+.consultorio img:hover {
+  transition: all 0.175s linear;
+  opacity: inherit;
+}
+.swiper-container-1 {
+  margin-top: 20px;
+}
+/*Footer*/
+.footer {
+  padding: 30px 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #eeeeee;
+  text-align: center;
+}
+.footer .item-rs {
+  margin: 30px 0;
+  text-decoration: none;
+}
+.footer .item-rs i {
+  font-size: 40px;
+}
+.footer .item-rs .bi-whatsapp {
+  color: #3cb878;
+}
+.footer .item-rs .bi-facebook {
+  color: #2973ba;
+}
+.footer .item-rs .bi-instagram {
+  color: #dc0744;
+}
+.footer .item-rs h5 {
+  margin: 25px 0 5px 0;
+  color: var(--secondary-color);
+}
+.footer .item-rs h2 {
+  color: var(--tercer-color);
+}
+.footer-1 {
+  padding: 10px 1rem;
+  background-color: #000;
+  text-align: center;
+}
+.footer-1 a {
+  color: white;
+}
+/*Botones Flotantes*/
+.botones-flotantes {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 13;
+}
+.botones-flotantes a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 30px;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.275s ease-in-out;
+}
+.botones-flotantes #whats {
+  background-color: #3cb878;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.botones-flotantes #tel {
+  background-color: gray;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.botones-flotantes #whats:hover {
+  background-color: #268353;
+}
+.botones-flotantes #tel:hover {
+  background-color: rgb(55, 55, 55);
+}
+.botones-flotantes img {
+  width: 40px;
+}
+.botones-flotantes #menu-contacto {
+  background-color: #2973ba;
+  z-index: 14;
+  position: relative;
+  width: 75px;
+  height: 75px;
+}
+.botones-flotantes #menu-contacto:hover {
+  background-color: #1d5283;
+}
+.show-whats {
+  right: 90px !important;
+}
+.show-tel {
+  bottom: 90px !important;
+}
+/*Media Queries*/
+@media (min-width: 768px) {
+  .header {
+    position: relative;
+  }
+  .header img {
+    width: 200px;
+  }
+  .menu-movil {
+    display: none;
+  }
+  .sample-slider img {
+    height: 800px;
+  }
+  .servicios {
+    grid-template-columns: repeat(3, 1fr);
+    place-content: center;
+    align-items: baseline;
+  }
+  .servicios .btn-casos {
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+  .detalles {
+    flex-direction: row;
+  }
+  .hero h3, .nosotros h3, .exito h3, .texto-testimonios h3, .texto-contacto h3 {
+    font-size: 48px;
+    font-weight: 600;
+  }
+  .counter h3 {
+    font-size: 36px;
+    font-weight: 600;
+  }
+  .galeria-casos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .testimonios {
+    flex-direction: row;
+  }
+  .swiper-container {
+    width: 400px;
+  }
+  .container-contacto {
+    max-width: 450px;
+  }
+  .swiper-container-1 {
+    width: 100%;
+  }
+  .footer {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+@media (min-width: 1024px) {
+  .header {
+    padding: 0 2rem;
+  }
+  .header-blanco {
+    box-shadow: none;
+  }
+  .btn-menu {
+    display: none;
+  }
+  .menu-desktop {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+  }
+  .menu-desktop a {
+    text-decoration: none;
+    color: #000;
+    margin: 0 0 0 20px;
+    font-size: 20px;
+    transition: all 0.275s ease-in;
+  }
+  .menu-desktop a[href='tel:6255890381'] {
+    padding: 10px 15px;
+    background-color: #2973ba;
+    border-radius: 50px;
+    color: white;
+  }
+  .menu-desktop a:hover {
+    padding: 10px 15px;
+    background-color: #2973ba;
+    border-radius: 50px;
+    transition: all 0.275s ease-in;
+    color: white;
+  }
+  .menu-desktop a[href='tel:6255890381']:hover {
+    background-color: #2A2F35;
+    transition: all 0.275s ease-in;
+    color: white;
+  }
+  .sample-slider img {
+    height: 700px;
+  }
+  .img-des {
+    display: block;
+  }
+  .img-mov {
+    display: none;
+  }
+  .hero h3, .nosotros h3, .exito h3, .texto-contacto h3 {
+    font-size: 72px;
+    font-weight: 600;
+  }
+  .item-servicios h3 {
+    font-size: 25px;
+  }
+  .container-nosotros img {
+    width: 50%;
+  }
+  .nosotros-max {
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .nosotros {
+    padding: 60px 3rem 60px 1rem;
+  }
+  .detalles .item-detalles {
+    height: 200px;
+  }
+  .galeria-casos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .testimonios {
+    max-width: 1200px;
+  }
+  .swiper-container {
+    width: 50%;
+  }
+}
